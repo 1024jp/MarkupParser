@@ -56,6 +56,8 @@ class MarkupParserTests: XCTestCase {
             fatalError()
         }
         XCTAssertEqual(section.subsections.count, 1)
+        XCTAssertEqual(section.subsections.first!.title!.string, "# hello")
+        
         
         
     }

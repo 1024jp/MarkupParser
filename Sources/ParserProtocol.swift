@@ -25,11 +25,10 @@ extension Parsable {
                 guard !line.isEmpty else { return nil }
                 
                 if let level = self.headingLevel(string: line) {
-                    
-                    return Chunk.heading(string: string, level: level)
+                    return Chunk.heading(string: line, level: level)
                 }
                 
-                return Chunk.nonHeading(string: string)
+                return Chunk.nonHeading(string: line)
         }
         
         let section = self.createSection(chunks: chunks)
