@@ -27,7 +27,10 @@ class MockParser: Parsable {
     
     func headingLevel(string: String) -> Int? {
         
-        return string.hasPrefix("#") ? 1 : nil
+        guard let range = string.range(of: "^#+", options: .regularExpression)
+            else { return nil }
+        
+        return string.substring(with: range).characters.count
     }
     
     func stripHeadingMarks(string: String) -> String {
@@ -45,7 +48,7 @@ class MarkupParserTests: XCTestCase {
         
         let document = parser.parse(string: source)!
         
-        XCTAssertEqual(document.language, "Markup")
+        XCTAssertEqual(document.language, "Markdown")
         XCTAssertEqual(document.rawString, source)
         
         let section = document.section
@@ -62,9 +65,6 @@ class MarkupParserTests: XCTestCase {
         }
         XCTAssertEqual(section.subsections.count, 1)
         XCTAssertEqual(section.subsections.first!.title!.string, "hello")
-        
-        
-        
     }
     
 }

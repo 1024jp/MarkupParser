@@ -161,14 +161,6 @@ public class MarkupParser: Parsable {
 	
 }
 
-extension MarkupParser {
-	
-//	fileprivate func makeBlock(from string: String) -> Block {
-//		
-//	}
-	
-}
-
 private extension String {
 	
 	static var empty: String {
