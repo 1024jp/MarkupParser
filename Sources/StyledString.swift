@@ -17,13 +17,13 @@ struct Style {
     
     let range: Range<String.Index>
     let type: Type
-}
-
-
-enum StyleType {
     
-    case bold
-    case strike
-    case link(url: String)
-    case image(url: String)
+    
+    enum Type {
+        
+        case bold
+        case strike
+        case link(url: String)
+        case image(url: String)
+    }
 }
