@@ -38,7 +38,7 @@ class MarkupParserTests: XCTestCase {
         let source = "hey\n# hello\nmy friend"
         let parser = MockParser()
         
-        let document = parser.parse(string: source)
+        let document = parser.parse(string: source)!
         
         XCTAssertEqual(document.language, "Mock")
         XCTAssertEqual(document.rawString, source)
