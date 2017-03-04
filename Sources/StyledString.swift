@@ -6,19 +6,19 @@
 //
 //
 
-struct StyledString {
+public struct StyledString {
     
     let string: String
     let styles: [Style]
     
     
-    struct Style {
+    public struct Style {
         
         let range: Range<String.Index>
         let type: Type
         
         
-        enum Type {
+        public enum `Type` {
             
             case bold
             case strike

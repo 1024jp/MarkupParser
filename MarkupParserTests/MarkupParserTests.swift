@@ -9,28 +9,55 @@
 import XCTest
 @testable import MarkupParser
 
+class MockParser: Parsable {
+    
+    static let langauge = "Mock"
+    
+    func makeBlocks(lines: [String]) -> [Block] {
+        let atttString = lines.joined(separator: "\n")
+        let block = Block.paragraph(attributedString: StyledString(string: atttString,
+                                                       styles: []))
+        return [block]
+    }
+    
+    func makeStyledString(string: String) -> StyledString {
+        
+        return StyledString(string: string, styles: [])
+    }
+    
+    func headingLevel(string: String) -> Int? {
+        
+        return string.hasPrefix("#") ? 1 : nil
+    }
+}
+
 class MarkupParserTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        
+        let source = "hey\n# hello\nmy friend"
+        let parser = MockParser()
+        
+        let document = parser.parse(string: source)
+        
+        XCTAssertEqual(document.language, "Mock")
+        XCTAssertEqual(document.rawString, source)
+        
+        let section = document.section
+        
+        XCTAssertNil(section.title)
+        XCTAssertEqual(section.level, 0)
+        XCTAssertEqual(section.contents.count, 1)
+        let content = section.contents.first!
+        switch content {
+        case .paragraph(attributedString: let string):
+            XCTAssertEqual(string.string, "hey")
+        default:
+            fatalError()
         }
+        XCTAssertEqual(section.subsections.count, 1)
+        
+        
     }
     
 }
