@@ -6,7 +6,7 @@
 //
 //
 
-struct Document {
+public struct Document {
     
     let rawString: String
     let language: String
@@ -15,16 +15,25 @@ struct Document {
     
 }
 
-struct Section {
+public struct Section {
     
     let title: StyledString?
     let level: Int
-    let contents: [Block]
-    let subsections: [Section]
+    var contents: [Block]
+    var subsections: [Section]
+    
+    
+    init(title: StyledString?, level: Int) {
+        self.title = title
+        self.level = level
+        self.contents = []
+        self.subsections = []
+    }
+    
 }
 
 
-enum Block {
+public enum Block {
     
     case paragraph(attributedString: StyledString)
     case list(list: [StyledString])

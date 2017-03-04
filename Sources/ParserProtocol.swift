@@ -9,12 +9,6 @@
 
 import Foundation
 
-public struct Heading {
-    
-    let string: String
-    let level: Int
-}
-
 public enum Chunk {
     case heading(string: String, level: Int)
     case nonHeading(string: String)
@@ -54,8 +48,8 @@ extension Parsable {
         let section = self.createSection(chunks: chunks)
         
         return Document(rawString: string,
-                        langauge: self.langauge,
-                        sectioin: section)
+                        language: type(of: self).langauge,
+                        section: section)
     }
     
 
