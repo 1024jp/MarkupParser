@@ -19,6 +19,11 @@ public class MarkupParser: Parsable {
 		return []
 		
 	}
+    
+    public func stripHeadingMarks(string: String) -> String {
+        
+        return string.replacingOccurrences(of: "^#+ *", with: "", options: .regularExpression)
+    }
 	
 	public func makeStyledString(string: String) -> StyledString {
 		

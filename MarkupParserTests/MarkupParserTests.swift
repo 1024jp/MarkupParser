@@ -29,6 +29,11 @@ class MockParser: Parsable {
         
         return string.hasPrefix("#") ? 1 : nil
     }
+    
+    func stripHeadingMarks(string: String) -> String {
+        
+        return string.replacingOccurrences(of: "^#+ *", with: "", options: .regularExpression)
+    }
 }
 
 class MarkupParserTests: XCTestCase {
@@ -56,7 +61,7 @@ class MarkupParserTests: XCTestCase {
             fatalError()
         }
         XCTAssertEqual(section.subsections.count, 1)
-        XCTAssertEqual(section.subsections.first!.title!.string, "# hello")
+        XCTAssertEqual(section.subsections.first!.title!.string, "hello")
         
         
         

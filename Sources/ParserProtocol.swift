@@ -13,6 +13,7 @@ public protocol Parsable {
     func makeBlocks(lines: [String]) -> [Block]
     func makeStyledString(string: String) -> StyledString
     func headingLevel(string: String) -> Int?
+    func stripHeadingMarks(string: String) -> String
 }
 
 
@@ -57,7 +58,8 @@ public extension Parsable {
                     continue
                 }
                 
-                if let title = lastTitle {
+                if let rawTitle = lastTitle {
+                    let title = self.stripHeadingMarks(string: rawTitle)
                     let styledTitle = self.makeStyledString(string: title)
                     let childSection = self.createSection(chunks: childChunks,
                                                           title: styledTitle,
@@ -82,7 +84,8 @@ public extension Parsable {
         }
         
         
-        if let title = lastTitle {
+        if let rawTitle = lastTitle {
+            let title = self.stripHeadingMarks(string: rawTitle)
             let styledTitle = self.makeStyledString(string: title)
             let childSection = self.createSection(chunks: childChunks,
                                                   title: styledTitle,
