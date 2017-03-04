@@ -8,17 +8,17 @@
 
 import Foundation
 
-class MarkupParser: Parsable {
+public class MarkupParser: Parsable {
 	
-	static let langauge: String = "Markup"
+	public static let langauge: String = "Markup"
 	
-	func makeBlocks(lines: [String]) -> [Block] {
+	public func makeBlocks(lines: [String]) -> [Block] {
 		
 		return []
 		
 	}
 	
-	func makeStyledString(string: String) -> StyledString {
+	public func makeStyledString(string: String) -> StyledString {
 		
 		var plainString = String.empty
 		var styles: [StyledString.Style] = []
@@ -142,7 +142,7 @@ class MarkupParser: Parsable {
 		
 	}
 	
-	func headingLevel(string: String) -> Int? {
+	public func headingLevel(string: String) -> Int? {
 		
 		let headerString = string.getFirstSection(separatedBy: .whitespaces)
 		return headerString.headerLevel
