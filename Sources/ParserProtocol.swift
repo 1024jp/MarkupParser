@@ -18,7 +18,7 @@ public protocol Parsable {
 
 extension Parsable {
 
-    func parse(string: String) -> Document? {
+    public func parse(string: String) -> Document? {
         
         let chunks = string.components(separatedBy: .newlines)
             .flatMap { (line: String) -> Chunk? in
