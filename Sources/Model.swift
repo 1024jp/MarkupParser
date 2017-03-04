@@ -29,4 +29,5 @@ enum Block {
     case paragraph(attributedString: StyledString)
     case list(list: [StyledString])
     case code(language: String?, content: String)
+    case table(string: String)
 }
