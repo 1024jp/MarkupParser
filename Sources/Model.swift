@@ -11,7 +11,7 @@ struct Document {
     let rawString: String
     let language: Language
     
-    let sections: [Section]
+    let section: Section
     
 }
 
