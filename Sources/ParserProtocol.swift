@@ -25,7 +25,7 @@ enum Chunk {
 
 protocol Parsable {
     
-    var langauge: String { get }
+    static var langauge: String { get }
     
     func parse(string: String) -> Document
     
