@@ -16,9 +16,9 @@ public class MarkupParser: Parsable {
 	
 	public func makeBlocks(lines: [String]) -> [Block] {
         
-        let atttString = lines.joined(separator: "\n")
-        let block = Block.paragraph(attributedString: StyledString(string: atttString,
-                                                                   styles: []))
+        let string = lines.joined(separator: "\n")
+        let styledString = self.makeStyledString(string: string)
+        let block = Block.paragraph(attributedString: styledString)
         return [block]
 	}
     

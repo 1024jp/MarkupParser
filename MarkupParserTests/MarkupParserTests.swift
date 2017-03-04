@@ -45,7 +45,7 @@ class MarkupParserTests: XCTestCase {
         
         let document = parser.parse(string: source)!
         
-        XCTAssertEqual(document.language, "Mock")
+        XCTAssertEqual(document.language, "Markup")
         XCTAssertEqual(document.rawString, source)
         
         let section = document.section
