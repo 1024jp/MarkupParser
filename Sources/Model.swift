@@ -6,7 +6,16 @@
 //
 //
 
-struct Section: StringLiteralConvertible {
+struct Document {
+    
+    let rawString: String
+    let language: Language
+    
+    let sections: [Section]
+    
+}
+
+struct Section {
     
     let title: StyledString?
     let level: Int
