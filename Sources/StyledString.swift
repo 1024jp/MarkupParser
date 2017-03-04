@@ -8,14 +8,14 @@
 
 public struct StyledString {
     
-    let string: String
-    let styles: [Style]
+    public let string: String
+    public let styles: [Style]
     
     
     public struct Style {
         
-        let range: Range<String.Index>
-        let type: Type
+        public let range: Range<String.Index>
+        public let type: Type
         
         
         public enum `Type` {

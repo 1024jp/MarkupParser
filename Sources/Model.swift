@@ -8,19 +8,19 @@
 
 public struct Document {
     
-    let rawString: String
-    let language: String
+    public let rawString: String
+    public let language: String
     
-    let section: Section
+    public let section: Section
     
 }
 
 public struct Section {
     
-    let title: StyledString?
-    let level: Int
-    var contents: [Block]
-    var subsections: [Section]
+    public let title: StyledString?
+    public let level: Int
+    public var contents: [Block]
+    public var subsections: [Section]
     
     
     init(title: StyledString?, level: Int) {

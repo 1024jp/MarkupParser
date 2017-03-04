@@ -16,7 +16,7 @@ public protocol Parsable {
 }
 
 
-extension Parsable {
+public extension Parsable {
 
     public func parse(string: String) -> Document? {
         
@@ -40,7 +40,7 @@ extension Parsable {
     
     
     
-    func createSection(chunks: [Chunk], title: StyledString? = nil, level: Int = 0) -> Section {
+    private func createSection(chunks: [Chunk], title: StyledString? = nil, level: Int = 0) -> Section {
         
         var section = Section(title: title, level: level)
         
