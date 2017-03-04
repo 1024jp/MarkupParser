@@ -10,6 +10,7 @@
 		2AF45E161E6A7A150030CD60 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		2AF45E171E6A7A150030CD60 /* ParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserProtocol.swift; sourceTree = "<group>"; };
 		2AF45E181E6A7A150030CD60 /* StyledString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledString.swift; sourceTree = "<group>"; };
+		7991BD741E6A9445009CB551 /* MarkupParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkupParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -26,6 +27,7 @@
 				2AF45E161E6A7A150030CD60 /* Model.swift */,
 				2AF45E171E6A7A150030CD60 /* ParserProtocol.swift */,
 				2AF45E181E6A7A150030CD60 /* StyledString.swift */,
+				7991BD741E6A9445009CB551 /* MarkupParser.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
