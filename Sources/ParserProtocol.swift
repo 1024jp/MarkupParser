@@ -9,13 +9,13 @@
 
 import Foundation
 
-struct Heading {
+public struct Heading {
     
     let string: String
     let level: Int
 }
 
-enum Chunk {
+public enum Chunk {
     case heading(string: String, level: Int)
     case nonHeading(string: String)
 }
@@ -23,11 +23,9 @@ enum Chunk {
 
 
 
-protocol Parsable {
+public protocol Parsable {
     
     static var langauge: String { get }
-    
-    func parse(string: String) -> Document
     
     func makeBlocks(lines: [String]) -> [Block]
     func makeStyledString(string: String) -> StyledString
