@@ -42,24 +42,26 @@ class MockParser: Parsable {
 class MarkupParserTests: XCTestCase {
     
     func testSwiftMarkdown() {
+        
         let bundle = Bundle(for: type(of: self))
         let url = bundle.url(forResource: "test.md", withExtension: "")!
         let string = try! String(contentsOf: url)
         
-        let parser = MarkupParser()
+        let parser = MockParser()
         
         let document = parser.parse(string: string)!
         
         XCTAssertEqual(document.rawString, string)
         
         XCTAssertEqual(document.section.contents.count, 1)
-        XCTAssertEqual(document.section.subsections.count, 13)
+        XCTAssertEqual(document.section.subsections.count, 1)
         
         let section = document.section.subsections.first!
         XCTAssertEqual(section.contents.count, 1)
-//        XCTAssertEqual(self.getString(block: section.contents.first!), "")
-        XCTAssertEqual(section.subsections.count, 0)
+        XCTAssertEqual(section.subsections.count, 5)
+        XCTAssertEqual(section.subsections[2].contents.first!.string!.characters.count, 308)
     }
+    
     
     func getString(block: Block) -> String? {
         
@@ -70,6 +72,7 @@ class MarkupParserTests: XCTestCase {
             return nil
         }
     }
+    
     
     func testExample() {
         
@@ -97,4 +100,18 @@ class MarkupParserTests: XCTestCase {
         XCTAssertEqual(section.subsections.first!.title!.string, "hello")
     }
     
+}
+
+
+extension Block {
+    
+    var string: String? {
+        
+        switch self {
+        case .paragraph(let string):
+            return string.string
+        default:
+            return nil
+        }
+    }
 }
