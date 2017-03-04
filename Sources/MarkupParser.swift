@@ -138,6 +138,7 @@ class MarkupParser: Parsable {
 		plainString.append(remainingPlainText)
 		
 		let style = StyledString(string: plainString, styles: styles)
+		return style
 		
 	}
 	
@@ -152,9 +153,9 @@ class MarkupParser: Parsable {
 
 extension MarkupParser {
 	
-	fileprivate func makeBlock(from string: String) -> Block {
-		
-	}
+//	fileprivate func makeBlock(from string: String) -> Block {
+//		
+//	}
 	
 }
 
