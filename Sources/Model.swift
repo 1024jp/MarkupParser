@@ -9,7 +9,7 @@
 struct Document {
     
     let rawString: String
-    let language: Language
+    let language: String
     
     let section: Section
     
