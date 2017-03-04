@@ -69,7 +69,7 @@ public extension Parsable {
                 childChunks = []
                 lastTitle = string
                 
-                guard currentLevel < level else {
+                guard currentLevel > level else {
                     break chunkLoop
                 }
                 
@@ -82,7 +82,7 @@ public extension Parsable {
             }
         }
         
-        if let rawTitle = lastTitle {
+        if let rawTitle = lastTitle, !childChunks.isEmpty {
             let title = self.stripHeadingMarks(string: rawTitle)
             let styledTitle = self.makeStyledString(string: title)
             let childSection = self.createSection(chunks: childChunks,
