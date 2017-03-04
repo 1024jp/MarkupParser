@@ -1,0 +1,84 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		2AF45E161E6A7A150030CD60 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2AF45E171E6A7A150030CD60 /* ParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserProtocol.swift; sourceTree = "<group>"; };
+		2AF45E181E6A7A150030CD60 /* StyledString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledString.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2AF45E0E1E6A79E80030CD60 = {
+			isa = PBXGroup;
+			children = (
+				2AF45E151E6A7A150030CD60 /* Sources */,
+			);
+			sourceTree = "<group>";
+		};
+		2AF45E151E6A7A150030CD60 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2AF45E161E6A7A150030CD60 /* Model.swift */,
+				2AF45E171E6A7A150030CD60 /* ParserProtocol.swift */,
+				2AF45E181E6A7A150030CD60 /* StyledString.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		2AF45E0F1E6A79E80030CD60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+			};
+			buildConfigurationList = 2AF45E121E6A79E80030CD60 /* Build configuration list for PBXProject "MarkupParser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2AF45E0E1E6A79E80030CD60;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		2AF45E131E6A79E80030CD60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		2AF45E141E6A79E80030CD60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2AF45E121E6A79E80030CD60 /* Build configuration list for PBXProject "MarkupParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AF45E131E6A79E80030CD60 /* Debug */,
+				2AF45E141E6A79E80030CD60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2AF45E0F1E6A79E80030CD60 /* Project object */;
+}
