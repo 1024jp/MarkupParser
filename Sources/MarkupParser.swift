@@ -10,7 +10,7 @@ import Foundation
 
 public class MarkupParser: Parsable {
 	
-	public static let langauge: String = "Markup"
+	public static let langauge: String = "Markdown"
 	
 	public init() {}
 	
@@ -147,6 +147,7 @@ public class MarkupParser: Parsable {
 		plainString.append(remainingPlainText)
 		
 		let style = StyledString(string: plainString, styles: styles)
+        
 		return style
 		
 	}
