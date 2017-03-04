@@ -74,7 +74,7 @@ public extension Parsable {
                 }
                 
             case .nonHeading(let string):
-                if childChunks.isEmpty {
+                if lastTitle == nil {
                     blockLines.append(string)
                 } else {
                     childChunks.append(chunk)
