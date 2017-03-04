@@ -6,17 +6,6 @@
 //
 //
 
-
-import Foundation
-
-public enum Chunk {
-    case heading(string: String, level: Int)
-    case nonHeading(string: String)
-}
-
-
-
-
 public protocol Parsable {
     
     static var langauge: String { get }
@@ -31,11 +20,9 @@ extension Parsable {
 
     func parse(string: String) -> Document {
         
-        let lines = string.components(separatedBy: .newlines)
-        
-        let chunks = lines.enumerated()
-            .flatMap { (index: Int, line: String) -> Chunk? in
-                guard line.isEmpty else { return nil }
+        let chunks = string.components(separatedBy: .newlines)
+            .flatMap { (line: String) -> Chunk? in
+                guard !line.isEmpty else { return nil }
                 
                 if let level = self.headingLevel(string: line) {
                     
@@ -66,7 +53,7 @@ extension Parsable {
         chunkLoop: for chunk in chunks {
             switch chunk {
             case .heading(let string, let currentLevel):
-                if currentLevel < childLevel {
+                if currentLevel > childLevel {
                     childChunks.append(chunk)
                     continue
                 }
@@ -79,12 +66,12 @@ extension Parsable {
                     section.subsections.append(childSection)
                 }
                 
-                guard currentLevel > level else {
-                    break chunkLoop
-                }
-                
                 childChunks = []
                 lastTitle = string
+                
+                guard currentLevel < level else {
+                    break chunkLoop
+                }
                 
             case .nonHeading(let string):
                 if childChunks.isEmpty {
@@ -109,4 +96,11 @@ extension Parsable {
         return section
     }
 
+}
+
+
+enum Chunk {
+    
+    case heading(string: String, level: Int)
+    case nonHeading(string: String)
 }
