@@ -15,9 +15,11 @@ public class MarkupParser: Parsable {
 	public init() {}
 	
 	public func makeBlocks(lines: [String]) -> [Block] {
-		
-		return []
-		
+        
+        let atttString = lines.joined(separator: "\n")
+        let block = Block.paragraph(attributedString: StyledString(string: atttString,
+                                                                   styles: []))
+        return [block]
 	}
     
     public func stripHeadingMarks(string: String) -> String {

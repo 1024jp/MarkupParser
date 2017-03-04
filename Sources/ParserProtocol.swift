@@ -40,7 +40,6 @@ public extension Parsable {
     }
     
     
-    
     private func createSection(chunks: [Chunk], title: StyledString? = nil, level: Int = 0) -> Section {
         
         var section = Section(title: title, level: level)
@@ -83,7 +82,6 @@ public extension Parsable {
             }
         }
         
-        
         if let rawTitle = lastTitle {
             let title = self.stripHeadingMarks(string: rawTitle)
             let styledTitle = self.makeStyledString(string: title)
@@ -101,7 +99,7 @@ public extension Parsable {
 }
 
 
-enum Chunk {
+private enum Chunk {
     
     case heading(string: String, level: Int)
     case nonHeading(string: String)

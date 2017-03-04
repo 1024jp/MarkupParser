@@ -40,8 +40,8 @@ class MarkupParserTests: XCTestCase {
     
     func testExample() {
         
-        let source = "hey\n# hello\nmy friend"
-        let parser = MockParser()
+        let source = "hey\n# hello\nmy friend\n## gayan\nhello"
+        let parser = MarkupParser()
         
         let document = parser.parse(string: source)!
         
