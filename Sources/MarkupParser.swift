@@ -12,6 +12,8 @@ public class MarkupParser: Parsable {
 	
 	public static let langauge: String = "Markup"
 	
+	public init() {}
+	
 	public func makeBlocks(lines: [String]) -> [Block] {
 		
 		return []
