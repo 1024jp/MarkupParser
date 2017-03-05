@@ -52,6 +52,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AF45E241E6C7E590030CD60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7991BD9B1E6A9585009CB551 /* Model.swift */,
+				7991BD9C1E6A9585009CB551 /* ParserProtocol.swift */,
+				7991BD9D1E6A9585009CB551 /* StyledString.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2AF45E251E6C7E610030CD60 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				7991BD9A1E6A9585009CB551 /* MarkdownParser.swift */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
 		7991BD751E6A9526009CB551 = {
 			isa = PBXGroup;
 			children = (
@@ -92,10 +110,8 @@
 		7991BD991E6A9585009CB551 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				7991BD9B1E6A9585009CB551 /* Model.swift */,
-				7991BD9C1E6A9585009CB551 /* ParserProtocol.swift */,
-				7991BD9D1E6A9585009CB551 /* StyledString.swift */,
-				7991BD9A1E6A9585009CB551 /* MarkdownParser.swift */,
+				2AF45E241E6C7E590030CD60 /* Models */,
+				2AF45E251E6C7E610030CD60 /* Parsers */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
