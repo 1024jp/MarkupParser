@@ -77,7 +77,7 @@ class MarkupParserTests: XCTestCase {
     func testExample() {
         
         let source = "hey\n# hello\nmy friend\n## gayan\nhello"
-        let parser = MarkupParser()
+        let parser = MarkdownParser()
         
         let document = parser.parse(string: source)!
         

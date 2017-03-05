@@ -11,7 +11,7 @@
 		2AF45E1C1E6ACBCA0030CD60 /* test.md in Resources */ = {isa = PBXBuildFile; fileRef = 2AF45E191E6ACB9B0030CD60 /* test.md */; };
 		7991BD891E6A9527009CB551 /* MarkupParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7991BD7F1E6A9526009CB551 /* MarkupParser.framework */; };
 		7991BD8E1E6A9527009CB551 /* MarkupParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7991BD8D1E6A9527009CB551 /* MarkupParserTests.swift */; };
-		7991BD9E1E6A9585009CB551 /* MarkupParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7991BD9A1E6A9585009CB551 /* MarkupParser.swift */; };
+		7991BD9E1E6A9585009CB551 /* MarkdownParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7991BD9A1E6A9585009CB551 /* MarkdownParser.swift */; };
 		7991BD9F1E6A9585009CB551 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7991BD9B1E6A9585009CB551 /* Model.swift */; };
 		7991BDA01E6A9585009CB551 /* ParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7991BD9C1E6A9585009CB551 /* ParserProtocol.swift */; };
 		7991BDA11E6A9585009CB551 /* StyledString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7991BD9D1E6A9585009CB551 /* StyledString.swift */; };
@@ -34,7 +34,7 @@
 		7991BD881E6A9527009CB551 /* MarkupParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkupParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7991BD8D1E6A9527009CB551 /* MarkupParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkupParserTests.swift; sourceTree = "<group>"; };
 		7991BD8F1E6A9527009CB551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7991BD9A1E6A9585009CB551 /* MarkupParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkupParser.swift; sourceTree = "<group>"; };
+		7991BD9A1E6A9585009CB551 /* MarkdownParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownParser.swift; sourceTree = "<group>"; };
 		7991BD9B1E6A9585009CB551 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		7991BD9C1E6A9585009CB551 /* ParserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserProtocol.swift; sourceTree = "<group>"; };
 		7991BD9D1E6A9585009CB551 /* StyledString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledString.swift; sourceTree = "<group>"; };
@@ -92,10 +92,10 @@
 		7991BD991E6A9585009CB551 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				7991BD9A1E6A9585009CB551 /* MarkupParser.swift */,
 				7991BD9B1E6A9585009CB551 /* Model.swift */,
 				7991BD9C1E6A9585009CB551 /* ParserProtocol.swift */,
 				7991BD9D1E6A9585009CB551 /* StyledString.swift */,
+				7991BD9A1E6A9585009CB551 /* MarkdownParser.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -190,7 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7991BD9E1E6A9585009CB551 /* MarkupParser.swift in Sources */,
+				7991BD9E1E6A9585009CB551 /* MarkdownParser.swift in Sources */,
 				7991BDA11E6A9585009CB551 /* StyledString.swift in Sources */,
 				7991BD9F1E6A9585009CB551 /* Model.swift in Sources */,
 				7991BDA01E6A9585009CB551 /* ParserProtocol.swift in Sources */,

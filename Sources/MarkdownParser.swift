@@ -1,5 +1,5 @@
 //
-//  MarkupParser.swift
+//  MarkdownParser.swift
 //  MarkupParser
 //
 //  Created by 史翔新 on 2017/03/04.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class MarkupParser: Parsable {
+public class MarkdownParser: Parsable {
 	
 	public static let langauge: String = "Markdown"
 	

@@ -40,9 +40,13 @@ public extension Parsable {
     }
     
     
-    private func createSection(chunks: [Chunk], title: StyledString? = nil, level: Int = 0) -> Section {
+    private func createSection(chunks: [Chunk], title: String? = nil, level: Int = 0) -> Section {
         
-        var section = Section(title: title, level: level)
+        let styledTitle: StyledString? = {
+            guard let title = title else { return nil }
+            return self.makeStyledString(string: title)
+        }()
+        var section = Section(title: styledTitle, level: level)
         
         var blockLines = [String]()
         var lastTitle: String?
@@ -59,9 +63,8 @@ public extension Parsable {
                 
                 if let rawTitle = lastTitle {
                     let title = self.stripHeadingMarks(string: rawTitle)
-                    let styledTitle = self.makeStyledString(string: title)
                     let childSection = self.createSection(chunks: childChunks,
-                                                          title: styledTitle,
+                                                          title: title,
                                                           level: childLevel)
                     section.subsections.append(childSection)
                 }
@@ -84,9 +87,8 @@ public extension Parsable {
         
         if let rawTitle = lastTitle, !childChunks.isEmpty {
             let title = self.stripHeadingMarks(string: rawTitle)
-            let styledTitle = self.makeStyledString(string: title)
             let childSection = self.createSection(chunks: childChunks,
-                                                  title: styledTitle,
+                                                  title: title,
                                                   level: childLevel)
             section.subsections.append(childSection)
         }
