@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2AF45E1A1E6ACB9B0030CD60 /* test.md in Sources */ = {isa = PBXBuildFile; fileRef = 2AF45E191E6ACB9B0030CD60 /* test.md */; };
-		2AF45E1C1E6ACBCA0030CD60 /* test.md in Resources */ = {isa = PBXBuildFile; fileRef = 2AF45E191E6ACB9B0030CD60 /* test.md */; };
-		7991BD891E6A9527009CB551 /* MarkupParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7991BD7F1E6A9526009CB551 /* MarkupParser.framework */; };
-		7991BD8E1E6A9527009CB551 /* MarkupParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7991BD8D1E6A9527009CB551 /* MarkupParserTests.swift */; };
+		2AF45E3C1E6C81B40030CD60 /* MarkupParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF45E2B1E6C7EFD0030CD60 /* MarkupParser.framework */; };
+		2AF45E421E6C82090030CD60 /* test.md in Resources */ = {isa = PBXBuildFile; fileRef = 2AF45E191E6ACB9B0030CD60 /* test.md */; };
+		2AF45E431E6C82820030CD60 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7991BD9B1E6A9585009CB551 /* Model.swift */; };
+		2AF45E441E6C82820030CD60 /* ParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7991BD9C1E6A9585009CB551 /* ParserProtocol.swift */; };
+		2AF45E451E6C82820030CD60 /* StyledString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7991BD9D1E6A9585009CB551 /* StyledString.swift */; };
+		2AF45E461E6C82820030CD60 /* MarkdownParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7991BD9A1E6A9585009CB551 /* MarkdownParser.swift */; };
 		7991BD9E1E6A9585009CB551 /* MarkdownParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7991BD9A1E6A9585009CB551 /* MarkdownParser.swift */; };
 		7991BD9F1E6A9585009CB551 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7991BD9B1E6A9585009CB551 /* Model.swift */; };
 		7991BDA01E6A9585009CB551 /* ParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7991BD9C1E6A9585009CB551 /* ParserProtocol.swift */; };
@@ -18,20 +20,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7991BD8A1E6A9527009CB551 /* PBXContainerItemProxy */ = {
+		2AF45E3D1E6C81B40030CD60 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7991BD761E6A9526009CB551 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7991BD7E1E6A9526009CB551;
-			remoteInfo = MarkupParser;
+			remoteGlobalIDString = 2AF45E2A1E6C7EFD0030CD60;
+			remoteInfo = "MarkupParser macOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2AF45E191E6ACB9B0030CD60 /* test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
+		2AF45E2B1E6C7EFD0030CD60 /* MarkupParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarkupParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AF45E371E6C81B40030CD60 /* MarkupParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkupParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7991BD7F1E6A9526009CB551 /* MarkupParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarkupParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7991BD831E6A9526009CB551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7991BD881E6A9527009CB551 /* MarkupParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkupParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7991BD8D1E6A9527009CB551 /* MarkupParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkupParserTests.swift; sourceTree = "<group>"; };
 		7991BD8F1E6A9527009CB551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7991BD9A1E6A9585009CB551 /* MarkdownParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownParser.swift; sourceTree = "<group>"; };
@@ -41,11 +44,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7991BD851E6A9527009CB551 /* Frameworks */ = {
+		2AF45E341E6C81B40030CD60 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7991BD891E6A9527009CB551 /* MarkupParser.framework in Frameworks */,
+				2AF45E3C1E6C81B40030CD60 /* MarkupParser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				7991BD7F1E6A9526009CB551 /* MarkupParser.framework */,
-				7991BD881E6A9527009CB551 /* MarkupParserTests.xctest */,
+				2AF45E2B1E6C7EFD0030CD60 /* MarkupParser.framework */,
+				2AF45E371E6C81B40030CD60 /* MarkupParserTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,9 +123,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7991BD7E1E6A9526009CB551 /* MarkupParser */ = {
+		2AF45E2A1E6C7EFD0030CD60 /* MarkupParser macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7991BD931E6A9527009CB551 /* Build configuration list for PBXNativeTarget "MarkupParser" */;
+			buildConfigurationList = 2AF45E301E6C7EFD0030CD60 /* Build configuration list for PBXNativeTarget "MarkupParser macOS" */;
+			buildPhases = (
+				2AF45E261E6C7EFD0030CD60 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MarkupParser macOS";
+			productName = "MarkupParser macOS";
+			productReference = 2AF45E2B1E6C7EFD0030CD60 /* MarkupParser.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2AF45E361E6C81B40030CD60 /* MarkupParserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AF45E3F1E6C81B40030CD60 /* Build configuration list for PBXNativeTarget "MarkupParserTests" */;
+			buildPhases = (
+				2AF45E331E6C81B40030CD60 /* Sources */,
+				2AF45E341E6C81B40030CD60 /* Frameworks */,
+				2AF45E351E6C81B40030CD60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2AF45E3E1E6C81B40030CD60 /* PBXTargetDependency */,
+			);
+			name = MarkupParserTests;
+			productName = MarkupParserTests;
+			productReference = 2AF45E371E6C81B40030CD60 /* MarkupParserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7991BD7E1E6A9526009CB551 /* MarkupParser iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7991BD931E6A9527009CB551 /* Build configuration list for PBXNativeTarget "MarkupParser iOS" */;
 			buildPhases = (
 				7991BD7A1E6A9526009CB551 /* Sources */,
 			);
@@ -129,28 +166,10 @@
 			);
 			dependencies = (
 			);
-			name = MarkupParser;
+			name = "MarkupParser iOS";
 			productName = MarkupParser;
 			productReference = 7991BD7F1E6A9526009CB551 /* MarkupParser.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		7991BD871E6A9527009CB551 /* MarkupParserTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7991BD961E6A9527009CB551 /* Build configuration list for PBXNativeTarget "MarkupParserTests" */;
-			buildPhases = (
-				7991BD841E6A9527009CB551 /* Sources */,
-				7991BD851E6A9527009CB551 /* Frameworks */,
-				2AF45E1B1E6ACBC20030CD60 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7991BD8B1E6A9527009CB551 /* PBXTargetDependency */,
-			);
-			name = MarkupParserTests;
-			productName = MarkupParserTests;
-			productReference = 7991BD881E6A9527009CB551 /* MarkupParserTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -162,13 +181,17 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Crazism;
 				TargetAttributes = {
+					2AF45E2A1E6C7EFD0030CD60 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					2AF45E361E6C81B40030CD60 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					7991BD7E1E6A9526009CB551 = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Manual;
-					};
-					7991BD871E6A9527009CB551 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -184,24 +207,43 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7991BD7E1E6A9526009CB551 /* MarkupParser */,
-				7991BD871E6A9527009CB551 /* MarkupParserTests */,
+				2AF45E2A1E6C7EFD0030CD60 /* MarkupParser macOS */,
+				7991BD7E1E6A9526009CB551 /* MarkupParser iOS */,
+				2AF45E361E6C81B40030CD60 /* MarkupParserTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2AF45E1B1E6ACBC20030CD60 /* Resources */ = {
+		2AF45E351E6C81B40030CD60 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AF45E1C1E6ACBCA0030CD60 /* test.md in Resources */,
+				2AF45E421E6C82090030CD60 /* test.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2AF45E261E6C7EFD0030CD60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AF45E431E6C82820030CD60 /* Model.swift in Sources */,
+				2AF45E441E6C82820030CD60 /* ParserProtocol.swift in Sources */,
+				2AF45E451E6C82820030CD60 /* StyledString.swift in Sources */,
+				2AF45E461E6C82820030CD60 /* MarkdownParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AF45E331E6C81B40030CD60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7991BD7A1E6A9526009CB551 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,26 +255,83 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7991BD841E6A9527009CB551 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2AF45E1A1E6ACB9B0030CD60 /* test.md in Sources */,
-				7991BD8E1E6A9527009CB551 /* MarkupParserTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7991BD8B1E6A9527009CB551 /* PBXTargetDependency */ = {
+		2AF45E3E1E6C81B40030CD60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7991BD7E1E6A9526009CB551 /* MarkupParser */;
-			targetProxy = 7991BD8A1E6A9527009CB551 /* PBXContainerItemProxy */;
+			target = 2AF45E2A1E6C7EFD0030CD60 /* MarkupParser macOS */;
+			targetProxy = 2AF45E3D1E6C81B40030CD60 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2AF45E311E6C7EFD0030CD60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = MarkupParser/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wolfrosch.MarkupParser;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2AF45E321E6C7EFD0030CD60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = MarkupParser/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wolfrosch.MarkupParser;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2AF45E401E6C81B40030CD60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarkupParserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wolfrosch.MarkupParserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2AF45E411E6C81B40030CD60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarkupParserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wolfrosch.MarkupParserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		7991BD911E6A9527009CB551 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -255,6 +354,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -274,12 +374,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = MarkupParser;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -308,6 +410,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -321,10 +424,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MarkupParser;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -335,7 +440,6 @@
 		7991BD941E6A9527009CB551 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -344,17 +448,14 @@
 				INFOPLIST_FILE = MarkupParser/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.MarkupParser;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wolfrosch.MarkupParser;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		7991BD951E6A9527009CB551 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -363,42 +464,30 @@
 				INFOPLIST_FILE = MarkupParser/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.MarkupParser;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wolfrosch.MarkupParser;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		7991BD971E6A9527009CB551 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = MarkupParserTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.MarkupParserTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		7991BD981E6A9527009CB551 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = MarkupParserTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.crazism.MarkupParserTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2AF45E301E6C7EFD0030CD60 /* Build configuration list for PBXNativeTarget "MarkupParser macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AF45E311E6C7EFD0030CD60 /* Debug */,
+				2AF45E321E6C7EFD0030CD60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2AF45E3F1E6C81B40030CD60 /* Build configuration list for PBXNativeTarget "MarkupParserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AF45E401E6C81B40030CD60 /* Debug */,
+				2AF45E411E6C81B40030CD60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		7991BD791E6A9526009CB551 /* Build configuration list for PBXProject "MarkupParser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -408,20 +497,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7991BD931E6A9527009CB551 /* Build configuration list for PBXNativeTarget "MarkupParser" */ = {
+		7991BD931E6A9527009CB551 /* Build configuration list for PBXNativeTarget "MarkupParser iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7991BD941E6A9527009CB551 /* Debug */,
 				7991BD951E6A9527009CB551 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7991BD961E6A9527009CB551 /* Build configuration list for PBXNativeTarget "MarkupParserTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7991BD971E6A9527009CB551 /* Debug */,
-				7991BD981E6A9527009CB551 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
